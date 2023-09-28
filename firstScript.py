@@ -2,6 +2,14 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
+options = webdriver.chrome_options()
+options.add_argument("--start-maximized")
+options.binary_location = CHROM_LOCATION
+options.add_extension(path)
+options.add_experimental_option("detach", True)
+options.add_experimental_option('excludeSwitches', ['disable-popup-blocking'])
+
+
 chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
 
@@ -22,4 +30,6 @@ value = message.text
 assert value == "Received!"
 
 driver.implicitly_wait(60)
+
+driver.quite()
 
