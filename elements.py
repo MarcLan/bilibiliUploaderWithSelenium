@@ -32,3 +32,9 @@ cancel_locator = locate_with(By.TAG_NAME, "button").to_left_of({By.ID: "submit"}
 submit_locator = locate_with(By.TAG_NAME, "button").to_right_of({By.ID: "cancel"})
 email_locator = locate_with(By.TAG_NAME, "input").near({By.ID: "lbl-email"})
 submit_locator = locate_with(By.TAG_NAME, "button").below({By.ID: "email"}).to_right_of({By.ID: "cancel"})
+
+vegetable = driver.find_element(By.CLASS_NAME, "tomatoes")
+fruits = drver.find_element(By.ID, "fruits")
+fruit = fruits.find_element(By.CLASS_NAME, "tomatoes")
+plants = driver.find_element(By.CSS_SELECTOR, "#fruits .tomatoes")
+plants = driver.find_elements(By.TAG_NAME, "li")
